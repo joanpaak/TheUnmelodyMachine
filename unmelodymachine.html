@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unmelody Machine</title>
+        <link rel="stylesheet" href="res/unmelodystyle.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>The Unmelody Machine</h1>
+            </div>
+            <div class="buttonBar">
+                <button id="newMelodyBtn">New melody</button>
+                <button id="playMelodyBtn">Play melody</button>
+                <button id="showHideMelodyBtn">Show/Hide melody</button>
+            </div>
+            <div class="firstNote">
+                <div class="infoboxTitle">First note:</div>
+                <div class="infoboxText" id="firstNoteText"></div>
+            </div>
+            <div class="trueMelody">
+                <div class="infoboxTitle">True melody:</div>
+                <div class="infoboxText" id="trueMelodyText"></div>
+            </div>
+            <div class="piano accordion">
+                <h2 class="accordionTitle">Piano >>></h2>
+                <div class="accordionContents">
+                    <div>
+                        <button id="synthPowerBtn">Power</button>
+                        <div id="synthPowerIndicator"></div>
+                    </div>
+                    <svg id="pianoSVG"></svg>
+                </div>
+            </div>
+            <div class="settings accordion">
+                <h2 class="accordionTitle">Settings >>></h2>
+                <div class="accordionContents">
+                    <table id="settingsTable">
+                        <tr>
+                            <td>Number of notes: </td>
+                            <td><input type="number" id="numNotesInput" min="2" value="4" max="12"></td>
+                        </tr>
+                        <tr>
+                            <td>Note lengh (s): </td>
+                            <td><input type="text" id="noteLengthInput"></td>
+                        </tr>
+                        <tr>
+                            <td>Only diatonic notes:</td>
+                            <td><input type="checkbox" id="diatonicOnlyInput"></td>
+                        </tr>
+                        <tr>
+                            <td>Only one octave:</td>
+                            <td>
+                                <input type="checkbox" id="oneOctaveInput">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h3>Countours</h3></td>
+                            <td>
+                                <h3>(check at least one):</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ascending:</td>
+                            <td><input type="checkbox" id="ascContour"></td>
+                        </tr>
+                        <tr>
+                            <td>Descending:</td>
+                            <td><input type="checkbox" id="descContour"></td>
+                        </tr>
+                        <tr>
+                            <td>Random:</td>
+                            <td><input type="checkbox" id="randContour"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer>&copy; Joni Pääkkö</footer>
+    </body>
+    <script src="res/jspiano.js"></script>
+    <script src="res/umm.js"></script>
+</html>

@@ -1,0 +1,135 @@
+.container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'buttonBar buttonBar'
+        'firstNote trueMelody'
+        'piano piano'
+        'settings settings';
+
+    grid-template-columns: 1fr 1fr;
+}
+
+.header {
+    grid-area: header;
+}
+
+.buttonBar {
+    grid-area: buttonBar;
+}
+
+.firstNote {
+    grid-area: firstNote;
+}
+
+.trueMelody {
+    grid-area: trueMelody;
+}
+
+.piano {
+    grid-area: piano;
+}
+
+.settings {
+    grid-area: settings;
+}
+
+/* */
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+}
+
+.buttonBar {
+    text-align: center;
+    /*border-bottom: 1px solid black;*/
+}
+
+.firstNote {
+    text-align: right;
+    padding-right: 1ch;
+    border-right: 1px solid black;
+}
+
+.trueMelody {
+    text-align: left;
+    padding-left: 1ch;
+}
+
+#trueMelodyText {
+    filter: blur(10px);
+    transition: 0.1s;
+}
+
+.infoboxTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1000;
+    font-size: 1.1rem;
+}
+
+.accordionTitle:hover {
+    cursor: pointer;
+}
+
+.accordionTitle:active {
+    color: red;
+}
+
+.buttonBar button {
+    display: inline-block;
+    width: 17ch;
+}
+
+.piano,
+.settings {
+    text-align: center;
+    /*border-top: 1px solid black;*/
+}
+
+#settingsTable {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#settingsTable td:nth-child(odd) {
+    text-align: right;
+}
+
+#settingsTable td:nth-child(even) {
+    text-align: left;
+}
+
+#noteLengthInput {
+    width: 3ch;
+}
+
+#synthPowerIndicator {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 1ch;
+    height: 1ch;
+    transition: background-color 0.5s;
+}
+
+footer {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* */
+
+rect:hover {
+    fill: black;
+    opacity: 50%;
+}
+
+rect:active {
+    opacity: 100%;
+    fill: crimson;
+}
